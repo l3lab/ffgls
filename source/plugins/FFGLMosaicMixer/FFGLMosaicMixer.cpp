@@ -206,7 +206,7 @@ void FFGLMosaicMixer::BuildGeometry(int quadCount)
 		glVertexAttribPointer(vertexDirectionsAttrId, 2, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(vertexDirectionsAttrId);
 
-		glBindBuffer(GL_ARRAY_BUFFER, 0);		
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		m_areRandomQuadsConstructed = true;
 	}
 	else
@@ -223,18 +223,8 @@ void FFGLMosaicMixer::BuildGeometry(int quadCount)
 		// Shift dirs
 		glBindBuffer(GL_ARRAY_BUFFER, m_vboBillboardRandomQuads[2]);
 		glBufferData(GL_ARRAY_BUFFER, quadCount * 4 * 2 * sizeof(GLfloat), randomQuadsShiftDirections.data(), GL_STATIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
-		
-	
-
-	
-	
-		
-	
-	
-	
-
-
 
 	randomQuadsVertices.clear();
 	randomQuadsTexCoords.clear();
@@ -297,29 +287,25 @@ FFResult FFGLMosaicMixer::ProcessOpenGL(ProcessOpenGLStruct *pGL)
 		frameWidth = pGL->inputTextures[1]->Width;
 	}
 
+	m_shader.BindShader();
 	
 	
 	// Update VAOs if needed
 	if (m_updateGeometryFlag)
-	{
-		m_shader.BindShader();
+	{		
 		glUniform2f(maxTexCoordsParamLocation, maxCoords.s, maxCoords.t);
 		glUniform2f(shiftParamLocation, 0.0f, 0.0f);
-		this->BuildGeometry(objectsCount);
-		m_shader.UnbindShader();
+		this->BuildGeometry(objectsCount);	
 		m_updateGeometryFlag = false;
 	}
 	
 	
 	
-	glBindTexture(GL_TEXTURE_2D, TextureObject1.Handle);
-	m_shader.BindShader();
+	glBindTexture(GL_TEXTURE_2D, TextureObject1.Handle);	
 	glUniform2f(maxTexCoordsParamLocation, maxCoords.s, maxCoords.t);
 	glUniform2f(shiftParamLocation, 0.0f, 0.0f);	
 	glBindVertexArray(m_vaoBillboardQuad);
 	glDrawArrays(GL_QUADS, 0, 4);	
-	m_shader.UnbindShader();
-	
 
 	if (m_mixerValue < 1)
 	{
@@ -338,25 +324,21 @@ FFResult FFGLMosaicMixer::ProcessOpenGL(ProcessOpenGLStruct *pGL)
 		{
 			m_frameCounter = 0;
 			m_dirSwitchCounter += 1;			
-			//m_shiftDirection = shiftDirections[m_dirSwitchCounter % 4];
-			m_updateGeometryFlag = true;
+			m_shiftDirection = directions[m_dirSwitchCounter % 4];
+			//m_updateGeometryFlag = true;
 			m_shift = 0;
 		}
 		
-		m_frameShift.s += 0.001f;
-		m_frameShift.t += 0.001f;
+		//m_frameShift.s += 0.001f;
+		//m_frameShift.t += 0.001f;
 		m_shift += 0.001f;
 		
 		
-		glBindTexture(GL_TEXTURE_2D, TextureObject2.Handle);
-		m_shader.BindShader();		
+		glBindTexture(GL_TEXTURE_2D, TextureObject2.Handle);		
 		glUniform2f(maxTexCoordsParamLocation, maxCoords.s, maxCoords.t);
-		glUniform2f(shiftParamLocation, m_shift * boundarySmoother, m_shift * boundarySmoother);		
+		glUniform2f(shiftParamLocation, m_shift * boundarySmoother * m_shiftDirection.s , m_shift * boundarySmoother * m_shiftDirection.t);
 		glBindVertexArray(m_vaoBillboardRandomQuads);
-		glDrawArrays(GL_QUADS, 0, 4 * m_quadCount * m_mixerValue );		
-		m_shader.UnbindShader();
-		
-		
+		glDrawArrays(GL_QUADS, 0, 4 * m_quadCount * m_mixerValue );								
 		m_frameCounter += 1;
 	}
 	else
@@ -365,13 +347,12 @@ FFResult FFGLMosaicMixer::ProcessOpenGL(ProcessOpenGLStruct *pGL)
 		glUniform2f(shiftParamLocation, .0f, .0f);
 		glBindVertexArray(m_vaoBillboardQuad);
 		glDrawArrays(GL_QUADS, 0, 4);
-		//glBindVertexArray(0);
+		
 	}
 
+	m_shader.UnbindShader();
+	glDisable(GL_TEXTURE_2D);
 
-	//m_shader.UnbindShader();
-	//glDisable(GL_TEXTURE_2D);
-	
 	glBindVertexArray(currentVao);
 
 	return FF_SUCCESS;

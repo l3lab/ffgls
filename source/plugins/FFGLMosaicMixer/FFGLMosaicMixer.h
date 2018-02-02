@@ -20,6 +20,12 @@ const GLTexcoords shiftDirections[4] = {
 	{ 0.0f,  1.0f }
 };
 
+const GLTexcoords directions[4] = {
+	{ -1.0f, 1.0f },
+	{ 1.0f,  -1.0f },
+	{ 1.0f, 1.0f },
+	{ -1.0f,  -1.0f }
+};
 
 class FFGLMosaicMixer: public CFreeFrameGLPlugin
 {
