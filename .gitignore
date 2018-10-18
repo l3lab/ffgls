@@ -1,4 +1,5 @@
-/binaries/
+/binaries/x64/Debug
+
 /build/windows/*.sdf
 /build/windows/.vs/FFGLPlugins/v14
 /build/windows
