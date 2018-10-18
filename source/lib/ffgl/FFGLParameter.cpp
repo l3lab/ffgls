@@ -1,5 +1,7 @@
 #include "FFGLParameter.h"
 
+
+
 FFGLParameter::FFGLParameter(const std::string& paramName, DWORD paramType)
 {
 	_paramName.assign(paramName);
@@ -13,7 +15,12 @@ FFGLParameter::FFGLParameter(const std::string& paramName, const std::string& st
 
 FFGLParameter::FFGLParameter(const std::string& paramName, float floatValue) : FFGLParameter(paramName, (DWORD)FF_TYPE_STANDARD)
 {
-	_floatValueStorage = floatValue;
+	m_floatValueStorage = floatValue;
+}
+
+FFGLParameter::FFGLParameter(const std::string& paramName, bool boolValue) : FFGLParameter(paramName, (DWORD)FF_TYPE_BOOLEAN)
+{
+	m_floatValueStorage = FFGLParameter::TrueValue;
 }
 
 FFGLParameter::~FFGLParameter()

@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommand>C:\Program Files %28x86%29\Resolume Arena 5.0.4\Arena.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand>C:\Program Files %28x86%29\Resolume Arena 5.1.4\Arena.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

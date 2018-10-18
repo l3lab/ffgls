@@ -453,12 +453,18 @@ FFResult deInstantiateGL(void *instanceID)
 	case FF_SETPARAMETER:
 		if (pPlugObj != NULL)
 		{
-			if (getParameterType(((const SetParameterStruct*)inputValue.PointerValue)->ParameterNumber) == FF_TYPE_TEXT)
-				retval.UIntValue = pPlugObj->SetTextParameter(((const SetParameterStruct*)inputValue.PointerValue)->ParameterNumber,
-															  (const char *)((const SetParameterStruct*)inputValue.PointerValue)->NewParameterValue.PointerValue);
+			auto paramType = getParameterType(((const SetParameterStruct*)inputValue.PointerValue)->ParameterNumber);
+
+			auto paramPtr = ((const SetParameterStruct*)inputValue.PointerValue);
+
+			if (paramType == FF_TYPE_TEXT)
+				retval.UIntValue = pPlugObj->SetTextParameter(paramPtr->ParameterNumber,
+															  (const char *)paramPtr->NewParameterValue.PointerValue);
 			else
-				retval.UIntValue = pPlugObj->SetFloatParameter(((const SetParameterStruct*)inputValue.PointerValue)->ParameterNumber,
-															   (*(float *)&((const SetParameterStruct*)inputValue.PointerValue)->NewParameterValue.UIntValue));
+			{
+				float paramValue = (*(float *)&(paramPtr->NewParameterValue.UIntValue));
+				retval.UIntValue = pPlugObj->SetFloatParameter(paramPtr->ParameterNumber, paramValue);
+			}
 		} else {
 			retval.UIntValue = FF_FAIL;
 		}

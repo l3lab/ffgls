@@ -7,18 +7,29 @@ class FFGLParameter
 {
 private:
 
+	const float TrueValue{ 1.0f };
+	const float FalseValue{ 0.0f };
+
 	std::string _paramName;
 	DWORD		_paramType;
 	bool		isChanged;
 
-	std::string _strValueStorage{ "" };
-	float	_floatValueStorage{ 0 };
+	std::string _strValueStorage{ "" };	
+	float	m_floatValueStorage{ 0 };	
 
 public:
 
 	FFGLParameter(const std::string& paramName, DWORD paramType);
+
+	// 
 	FFGLParameter(const std::string& paramName, const std::string& strValue);
+
+	// Float value parameter (FF_TYPE_STANDARD)
 	FFGLParameter(const std::string& paramName, float floatValue);
+
+	// Boolean value parameter (FF_TYPE_BOOLEAN)
+	FFGLParameter(const std::string & paramName, bool boolValue);
+
 	~FFGLParameter();
 
 	DWORD	getType()
@@ -26,27 +37,37 @@ public:
 		return _paramType;
 	}
 
-	std::string& getName()
+	const std::string& getName()
 	{
 		return _paramName;
 	}
 
 	float getFloatStorage()
 	{
-		return _floatValueStorage;
+		return m_floatValueStorage;
 	}
 
-	std::string&	getStrStorage()
+	operator bool()
+	{
+		return m_floatValueStorage > 0.0;
+	}
+
+	operator float()
+	{
+		return m_floatValueStorage;
+	}
+
+	const std::string&	getStrStorage()
 	{
 		return _strValueStorage;
 	}
 
 
-	void setFloatStorage(float newValue)
+	void setValue(float newValue)
 	{
-		if (_floatValueStorage != newValue)
+		if (m_floatValueStorage != newValue)
 		{
-			_floatValueStorage = newValue;
+			m_floatValueStorage = newValue;
 			isChanged = true;
 		}
 		else

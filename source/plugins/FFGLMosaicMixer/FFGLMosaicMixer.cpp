@@ -188,19 +188,19 @@ void FFGLMosaicMixer::BuildGeometry(int quadCount)
 		glBindVertexArray(m_vaoBillboardRandomQuads);
 		glGenBuffers(3, m_vboBillboardRandomQuads);
 
-		// Coordinates
+		// Filling buffer with vertex data
 		glBindBuffer(GL_ARRAY_BUFFER, m_vboBillboardRandomQuads[0]);
 		glBufferData(GL_ARRAY_BUFFER, quadCount * 4 * 3 * sizeof(GLfloat), randomQuadsVertices.data(), GL_STATIC_DRAW);
 		glVertexAttribPointer(vertexCoordsAttrId, 3, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(vertexCoordsAttrId);
 
-		// Tex coords
+		// Filling buffer with texcoords
 		glBindBuffer(GL_ARRAY_BUFFER, m_vboBillboardRandomQuads[1]);
 		glBufferData(GL_ARRAY_BUFFER, quadCount * 4 * 2 * sizeof(GLfloat), randomQuadsTexCoords.data(), GL_STATIC_DRAW);
 		glVertexAttribPointer(texCoordsAttrId, 2, GL_FLOAT, GL_FALSE, 0, 0);
 		glEnableVertexAttribArray(texCoordsAttrId);
 
-		// Shift dirs
+		// Shift directions
 		glBindBuffer(GL_ARRAY_BUFFER, m_vboBillboardRandomQuads[2]);
 		glBufferData(GL_ARRAY_BUFFER, quadCount * 4 * 2 * sizeof(GLfloat), randomQuadsShiftDirections.data(), GL_STATIC_DRAW);
 		glVertexAttribPointer(vertexDirectionsAttrId, 2, GL_FLOAT, GL_FALSE, 0, 0);
@@ -297,9 +297,7 @@ FFResult FFGLMosaicMixer::ProcessOpenGL(ProcessOpenGLStruct *pGL)
 		glUniform2f(shiftParamLocation, 0.0f, 0.0f);
 		this->BuildGeometry(objectsCount);	
 		m_updateGeometryFlag = false;
-	}
-	
-	
+	}		
 	
 	glBindTexture(GL_TEXTURE_2D, TextureObject1.Handle);	
 	glUniform2f(maxTexCoordsParamLocation, maxCoords.s, maxCoords.t);
@@ -369,7 +367,7 @@ FFResult FFGLMosaicMixer::SetFloatParameter(unsigned int dwIndex, float value)
 {
 	if (m_mixerValue != 1.0 && value == 1.0)
 	{
-		m_updateGeometryFlag = true;
+		//m_updateGeometryFlag = true;
 	}
 	m_mixerValue = value;
 	return FF_SUCCESS;
