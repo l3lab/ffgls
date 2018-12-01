@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\source\lib\ffgl\utilities\utilities.cpp">
+      <Filter>Source Files\lib\ffgl\utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\glee\GLee.c">
+      <Filter>Source Files\lib\glee</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGL.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLFBO.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLParameter.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLPluginInfo.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLPluginInfoData.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLPluginManager.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLPluginSDK.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\lib\ffgl\FFGLShader.cpp">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\plugins\FFGLVolumeRenderer\FFGLVolumes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\lib\ffgl\utilities\utilities.h">
+      <Filter>Source Files\lib\ffgl\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\glee\GLee.h">
+      <Filter>Source Files\lib\glee</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FreeFrame.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGL.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLFBO.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLLib.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLParameter.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLPluginInfo.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLPluginManager.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLPluginManager_inl.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLPluginSDK.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\lib\ffgl\FFGLShader.h">
+      <Filter>Source Files\lib\ffgl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\plugins\FFGLVolumeRenderer\FFGLVolumes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bb0e754a-ddf3-479d-8b84-4fa0f55a13b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib">
+      <UniqueIdentifier>{1843da6d-d00f-48cc-bfc0-6ad3bcf500ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\ffgl">
+      <UniqueIdentifier>{526952f8-afab-4fa8-9a0a-4ab92a31d504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\glee">
+      <UniqueIdentifier>{629007f7-df21-4c6f-9add-4e00bbaabb4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib\ffgl\utilities">
+      <UniqueIdentifier>{2aa3d0b5-ae7c-4984-bb1b-25cae4abef0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

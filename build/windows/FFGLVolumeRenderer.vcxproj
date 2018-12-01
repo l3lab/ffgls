@@ -29,7 +29,7 @@
     <ClCompile Include="..\..\source\lib\ffgl\FFGLShader.cpp" />
     <ClCompile Include="..\..\source\lib\ffgl\utilities\utilities.cpp" />
     <ClCompile Include="..\..\source\lib\glee\GLee.c" />
-    <ClCompile Include="..\..\source\plugins\FFGLTriangleMixer\FFGLTriangleMixer.cpp" />
+    <ClCompile Include="..\..\source\plugins\FFGLVolumeRenderer\FFGLVolumes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\lib\ffgl\FFGL.h" />
@@ -44,12 +44,11 @@
     <ClInclude Include="..\..\source\lib\ffgl\FreeFrame.h" />
     <ClInclude Include="..\..\source\lib\ffgl\utilities\utilities.h" />
     <ClInclude Include="..\..\source\lib\glee\GLee.h" />
-    <ClInclude Include="..\..\source\plugins\FFGLTriangleMixer\FFGLTriangleMixer.h" />
+    <ClInclude Include="..\..\source\plugins\FFGLVolumeRenderer\FFGLVolumes.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{47CC3AE7-A140-41BA-9CC3-65FDDABD5E88}</ProjectGuid>
+    <ProjectGuid>{69728B04-5D69-448B-852F-5DC0FB2A8AEC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <ProjectName>FFGLTriangleMixer</ProjectName>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -154,7 +153,7 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\..\..\source\common\opengl\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenGL32.lib;Glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -196,7 +195,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <AdditionalLibraryDirectories>..\..\..\source\common\opengl\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenGL32.lib;Glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
