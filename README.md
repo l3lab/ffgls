@@ -3,7 +3,7 @@
 
 A general-purpose 64-bit plugins collection compatible with 64-bit FFGL hosts.
 
-[64-bit Windows binaries](https://github.com/l3lab/ffgls/tree/master/binaries/x64/Release)
+[Compiled 64-bit Windows binaries](https://github.com/l3lab/ffgls/tree/master/binaries/x64/Release)
 
 1. **FFGLTriangleMixer** mixer combines two video layers using triangle mesh pattern. 
 The screen area is divided into two triangle strips and every triangle is textured with curtain input layer. 
