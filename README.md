@@ -1,7 +1,7 @@
 # FFGLs
 ## FFGL Plugin pack
 
-A collection general-purpose 64-bit plugins suitable for 64-bit FFGL hosts.
+A general-purpose 64-bit plugins collection compatible with 64-bit FFGL hosts.
 
 [64-bit Windows binaries](https://github.com/l3lab/ffgls/tree/master/binaries/x64/Release)
 
