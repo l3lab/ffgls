@@ -10,7 +10,7 @@ The screen area is divided into two triangle strips and every triangle is textur
 Blending factor controls texture mapping for different triangles (see docs and demos for details).
 
    1. [Usage sample](https://vimeo.com/vjdornierwal/trianglemx)
-   1. [TriangleMixer manual (slightly outdated)](https://github.com/OlegPotiy/FFGLTriangleMX/blob/master/Docs/)
+   1. [TriangleMixer manual](https://github.com/l3lab/ffgls/tree/master/docs/FFGLTriangleMixer)
    1. [Previous version (32-bit)](https://github.com/OlegPotiy/FFGLTriangleMX/tree/master/Bins)
    
 1. **FFGLMosaicMixer** combines input layers into a patchy composition.
@@ -20,7 +20,7 @@ Blending factor controls texture mapping for different triangles (see docs and d
 1. **FFGLVolumeRenderer.** The plugin creates an illusion of solid volume when applied to a image with zero luminance areas.
 
    1. [Usage sample](https://vimeo.com/vjdornierwal/volumes)
-   1. [VolumeRenderer manual](https://github.com/OlegPotiy/FFGLVolumeRenderer/tree/master/Docs)
+   1. [VolumeRenderer manual](https://github.com/l3lab/ffgls/tree/master/docs/FFGLVolumeRenderer)
    1. [Previous version (32-bit)](https://github.com/OlegPotiy/FFGLVolumeRenderer/tree/master/Bins)
 
 
