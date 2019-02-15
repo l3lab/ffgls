@@ -1,12 +1,14 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLTriangleMixer", "FFGLGeometryMixer.vcxproj", "{47CC3AE7-A140-41BA-9CC3-65FDDABD5E88}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLMosaicMixer", "FFGLMosaicMixer.vcxproj", "{B08BE16E-85F5-47EE-AB9A-3F16050B02D5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLVolumeRenderer", "FFGLVolumeRenderer.vcxproj", "{69728B04-5D69-448B-852F-5DC0FB2A8AEC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLFlows", "FFGLFlows.vcxproj", "{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,8 +42,19 @@ Global
 		{69728B04-5D69-448B-852F-5DC0FB2A8AEC}.Release|Win32.Build.0 = Release|Win32
 		{69728B04-5D69-448B-852F-5DC0FB2A8AEC}.Release|x64.ActiveCfg = Release|x64
 		{69728B04-5D69-448B-852F-5DC0FB2A8AEC}.Release|x64.Build.0 = Release|x64
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Debug|Win32.Build.0 = Debug|Win32
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Debug|x64.ActiveCfg = Debug|x64
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Debug|x64.Build.0 = Debug|x64
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|Win32.ActiveCfg = Release|Win32
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|Win32.Build.0 = Release|Win32
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|x64.ActiveCfg = Release|x64
+		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {648399E1-D5AF-4776-A78A-3A18902C079A}
 	EndGlobalSection
 EndGlobal
