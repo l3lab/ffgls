@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLVolumeRenderer", "FFGLV
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLFlows", "FFGLFlows.vcxproj", "{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFGLModularDelay", "FFGLModularDelay.vcxproj", "{5EFE1CB8-12C9-42AD-9846-5D954F68A201}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -50,6 +52,14 @@ Global
 		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|Win32.Build.0 = Release|Win32
 		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|x64.ActiveCfg = Release|x64
 		{8DDD7C5A-61A0-40BB-A5AE-FA16D22DF4A4}.Release|x64.Build.0 = Release|x64
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Debug|Win32.Build.0 = Debug|Win32
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Debug|x64.ActiveCfg = Debug|x64
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Debug|x64.Build.0 = Debug|x64
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Release|Win32.ActiveCfg = Release|Win32
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Release|Win32.Build.0 = Release|Win32
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Release|x64.ActiveCfg = Release|x64
+		{5EFE1CB8-12C9-42AD-9846-5D954F68A201}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

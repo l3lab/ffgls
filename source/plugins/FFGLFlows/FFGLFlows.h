@@ -63,9 +63,6 @@ public:
 	FFResult SetTextParameter(unsigned int index, const char *value) override;
 	char* GetTextParameter(unsigned int index) override;
 
-	//DWORD	SetParameter(const SetParameterStruct* pParam);
-	//DWORD	GetParameter(DWORD dwIndex);
-
 	FFResult	ProcessOpenGL(ProcessOpenGLStruct* pGL) override;
 	FFResult	InitGL(const FFGLViewportStruct *vp) override;
 	FFResult	DeInitGL() override;

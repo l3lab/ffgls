@@ -116,9 +116,6 @@ FFResult FFGLFlows::InitGL(const FFGLViewportStruct *vp)
 	defaultShader.BindShader();
 	glUniform1i(defaultShader.FindUniform("inputTexture"), 0);
 	defaultShader.UnbindShader();
-	
-
-	
 
 	return FF_SUCCESS;
 }

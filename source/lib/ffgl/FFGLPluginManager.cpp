@@ -184,7 +184,7 @@ void CFFGLPluginManager::SetParamInfo(unsigned int dwIndex, const char* pchName,
 	pInfo->ID = dwIndex;
 
 #ifdef FFGL_EXT
-	pInfo->numElements = 1;
+	pInfo->numElements = 2;
     pInfo->usage = 0;
 #endif
 	
